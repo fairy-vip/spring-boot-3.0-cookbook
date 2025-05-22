@@ -1,0 +1,16 @@
+server:
+    port: 8081
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bindings, health, info, metrics, env, beans, loggers
+spring:
+  application:
+    name: ranking
+
+  rabbitmq:
+    host: localhost
+    username: packt
+    password: packt
+    port: 5672

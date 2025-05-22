@@ -1,0 +1,32 @@
+logging:
+  level:
+    reactor:
+      netty: INFO
+    org:
+      springframework:
+        security: TRACE
+        web: INFO
+        cloud:
+          gateway: DEBUG
+spring:
+  application:
+    name: GatewayServer
+  cloud:
+    gateway:
+      routes:
+        - id: teams
+          uri: lb://football-api
+          predicates:
+            - Path=/football/**
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          audiences:
+          - football
+          - football-ui
+          issuer-uri: http://localhost:9000   
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/

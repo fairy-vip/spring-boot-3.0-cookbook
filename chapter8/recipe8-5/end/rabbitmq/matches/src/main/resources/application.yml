@@ -1,0 +1,14 @@
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bindings, health, info, metrics, env, beans, loggers
+spring:
+  application:
+    name: match-events
+
+  rabbitmq:
+    host: localhost
+    username: packt
+    password: packt
+    port: 5672
