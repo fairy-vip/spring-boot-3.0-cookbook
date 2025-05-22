@@ -1,7 +1,6 @@
 package com.packt.albums;
 
 import java.util.List;
-
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -9,19 +8,20 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/albums")
 public class AlbumsController {
-    private final FootballClient footballClient;
 
-    public AlbumsController(FootballClient footballClient) {
-        this.footballClient = footballClient;
-    }
+  private final FootballClient footballClient;
 
-    @GetMapping("/players")
-    public List<Player> getPlayers() {
-        return footballClient.getPlayers();
-    }
+  public AlbumsController(FootballClient footballClient) {
+    this.footballClient = footballClient;
+  }
 
-    @GetMapping("/serviceinfo")
-    public String getServiceInfo() {
-        return footballClient.getServiceInfo();
-    }
+  @GetMapping("/players")
+  public List<Player> getPlayers() {
+    return footballClient.getPlayers();
+  }
+
+  @GetMapping("/serviceinfo")
+  public String getServiceInfo() {
+    return footballClient.getServiceInfo();
+  }
 }

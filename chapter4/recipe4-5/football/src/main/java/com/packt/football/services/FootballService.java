@@ -45,9 +45,9 @@ public class FootballService {
 
   public Player getPlayer(String id) {
     Player player = players.get(id);
-      if (player == null) {
-          throw new NotFoundException("Player not found");
-      }
+    if (player == null) {
+      throw new NotFoundException("Player not found");
+    }
     return player;
   }
 
