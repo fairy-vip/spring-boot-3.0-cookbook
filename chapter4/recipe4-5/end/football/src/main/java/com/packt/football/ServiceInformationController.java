@@ -9,11 +9,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class ServiceInformationController {
 
-    @Value("${football.instanceId}")
-    private String instanceId;
+  @Value("${football.instanceId}")
+  private String instanceId;
 
-    @GetMapping
-    public String getInstanceId() {
-        return instanceId;
-    }
+  @GetMapping
+  public String getInstanceId() {
+    return instanceId;
+  }
 }
