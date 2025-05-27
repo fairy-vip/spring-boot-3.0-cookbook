@@ -22,9 +22,9 @@ eureka:
       defaultZone: http://localhost:8761/eureka/
 
 
-#gatewaay请求地址
+#gatewaay璇锋眰鍦板潃
 # http://localhost:8080/api/players
 # http://localhost:8080/api/albums
-#实际请求地址
+#瀹為檯璇锋眰鍦板潃
 #http://localhost:xxxx/players
 #http://localhost:yyyy/albums
